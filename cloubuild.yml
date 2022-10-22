@@ -1,14 +1,14 @@
 steps:
-- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-  entrypoint: 'gcloud'
-  args:
-  - iam 
-  - service-accounts
-  - keys
-  - enable
-  - new-a-project-366214-12de7ee934f1.json
-  - --iam-account 
-  - codebuild-new@a-project-366214.iam.gserviceaccount.com
+# - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+#   entrypoint: 'gcloud'
+#   args:
+#   - iam 
+#   - service-accounts
+#   - keys
+#   - enable
+#   - new-a-project-366214-12de7ee934f1.json
+#   - --iam-account 
+#   - codebuild-new@a-project-366214.iam.gserviceaccount.com
 
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: 'gcloud'
