@@ -15,11 +15,11 @@ steps:
   args:
   - dns
   - record-sets
-  - update
-  - foo.wolkinc.com.
-  - --rrdatas=2.2.2.2,5.5.5.5 
-  - --type=A 
-  - --ttl=60 
+  - list
+#   - foo.wolkinc.com.
+#   - --rrdatas=2.2.2.2,5.5.5.5 
+#   - --type=A 
+#   - --ttl=60 
   - --zone=wolkinc
 
 # - name: 'gcr.io/cloud-builders/gcloud'
