@@ -17,7 +17,7 @@ steps:
   - record-sets
   - update
   - foo.wolkinc.com.
-  - --rrdatas=1.1.1.1,9.9.9.9 
+  - --rrdatas=2.2.2.2,5.5.5.5 
   - --type=A 
   - --ttl=60 
   - --zone=wolkinc
