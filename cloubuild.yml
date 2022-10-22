@@ -7,7 +7,7 @@ steps:
   - create
   - ./somekey.json 
   - --iam-account 
-  - atif.ramzan89@gmail.com
+  - codebuild@a-project-366214.iam.gserviceaccount.com
 
 - name: "gcr.io/cloud-builders/gcloud"
   args:
