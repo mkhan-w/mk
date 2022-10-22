@@ -27,10 +27,10 @@ steps:
   args:
   - '-c'
   - |
-    gcloud dns --project=A Project record-sets transaction start --zone=wolkinc
-    gcloud dns --project=A Project record-sets transaction add foo.wolkinc.com. \
+    gcloud dns --project=a-project-366214 record-sets transaction start --zone=wolkinc
+    gcloud dns --project=a-project-366214 record-sets transaction add foo.wolkinc.com. \
         --name=demo-app-review-pr.wolkinc.com. \
         --ttl=300 \
         --type=CNAME \
         --zone=wolkinc
-    gcloud dns --project=A Project record-sets transaction execute --zone=wolkinc
+    gcloud dns --project=a-project-366214 record-sets transaction execute --zone=wolkinc
