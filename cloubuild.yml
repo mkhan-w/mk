@@ -1,6 +1,16 @@
 steps:
 - name: "gcr.io/cloud-builders/gcloud"
   args:
+  - iam 
+  - service-accounts
+  - keys
+  - create
+  - ./somekey.json 
+  - --iam-account 
+  - atif.ramzan89@gmail.com
+
+- name: "gcr.io/cloud-builders/gcloud"
+  args:
   - dns
   - record-sets
   - update
