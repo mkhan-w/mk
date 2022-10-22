@@ -1,36 +1,36 @@
 steps:
-# - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-#   entrypoint: 'gcloud'
-#   args:
-#   - iam 
-#   - service-accounts
-#   - keys
-#   - create
-#   - key.json
-#   - --iam-account 
-#   - codebuild-new@a-project-366214.iam.gserviceaccount.com
-
-# - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-#   entrypoint: 'gcloud'
-#   args:
-#   - dns
-#   - record-sets
-#   - update
-#   - foo.wolkinc.com.
-#   - --rrdatas=1.1.1.1,9.9.9.9 
-#   - --type=A 
-#   - --ttl=60 
-#   - --zone=wolkinc
-
-- name: 'gcr.io/cloud-builders/gcloud'
-  entrypoint: 'bash'
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: 'gcloud'
   args:
-  - '-c'
-  - |
-    gcloud dns --project=a-project-366214 record-sets transaction start --zone=wolkinc
-    gcloud dns --project=a-project-366214 record-sets transaction add foo.wolkinc.com. \
-        --name=demo-app-review-pr.wolkinc.com. \
-        --ttl=300 \
-        --type=CNAME \
-        --zone=wolkinc
-    gcloud dns --project=a-project-366214 record-sets transaction execute --zone=wolkinc
+  - iam 
+  - service-accounts
+  - keys
+  - create
+  - key.json
+  - --iam-account 
+  - codebuild-new@a-project-366214.iam.gserviceaccount.com
+
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: 'gcloud'
+  args:
+  - dns
+  - record-sets
+  - update
+  - foo.wolkinc.com.
+  - --rrdatas=1.1.1.1,9.9.9.9 
+  - --type=A 
+  - --ttl=60 
+  - --zone=wolkinc
+
+# - name: 'gcr.io/cloud-builders/gcloud'
+#   entrypoint: 'bash'
+#   args:
+#   - '-c'
+#   - |
+#     gcloud dns --project=a-project-366214 record-sets transaction start --zone=wolkinc
+#     gcloud dns --project=a-project-366214 record-sets transaction add foo.wolkinc.com. \
+#         --name=demo-app-review-pr.wolkinc.com. \
+#         --ttl=300 \
+#         --type=CNAME \
+#         --zone=wolkinc
+#     gcloud dns --project=a-project-366214 record-sets transaction execute --zone=wolkinc
